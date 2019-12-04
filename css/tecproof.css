@@ -1,0 +1,57 @@
+/*Configurações de identiade*/
+
+.header{
+    background-color: #00376f;
+    padding: 1px;
+}
+
+.logo{
+    text-align: center;
+    color: #fff;
+    font-size: 3.0em;
+    margin-top: 5px;
+}
+
+.logo-part1{
+    font-size: 1.0em;
+    color: #007715;
+    margin-left: -50px;
+}
+
+.Logo-img{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+/*Disposição e posições*/
+
+.box_provas{
+    height: 80%;
+}
+
+.label-entrada{
+    font-size: 1.5em; 
+}
+
+.box_entrada{
+    margin-top: 2%;
+}
+
+.opt-buttons{
+    width: 20%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.quadro {
+    height: 400px;
+    width: 100%;
+    border: 2px solid #003770;
+    border-radius: 10px;
+    margin-top: 10px;
+    overflow: auto;
+}
+
+.label-modal{
+    font-size: 1.1em;
+}

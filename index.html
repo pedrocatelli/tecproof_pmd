@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<head>
+    <title>TecProof</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Authors" content="João Pedro Mota, Pedro Catelli, Vinícius Martins, Thiago Villa">
+
+
+    <link rel="stylesheet" href="css/app_style.css">
+    <link rel="stylesheet" href="css/tecproof.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script src="src/helper.js"></script>
+    <script src="src/core.js"></script>
+    <script src="src/data.js"></script>
+    <script src="src/main.js"></script>
+
+</head>
+<body>
+    
+    <style>
+        body{
+            background-image: url('tecproof_back.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+
+    <div class="header">
+        <h1 class="logo">
+            <img class="Logo-img" src="logo_unb.png" alt="Logo Unb" style="width: 75px; height: auto;" align="left"> 
+            <span class="logo-part1" style="-webkit-text-stroke-width: 0.3px; -webkit-text-stroke-color: #fff;">TEC</span>Proof
+        </h1>
+    </div>
+
+    <div class="container">
+
+        <div class="col-lg-9">
+            <div class="form-horizontal">
+                <div class="box_entrada">
+
+                    <div class="form-group" style="margin-bottom: 5px;">
+                        <label class="label-entrada col-sm-2" style="color: #003770">Proposição:</label>
+                        <div>
+                            <input type="text" class="form-control" id="expression">
+                        </div>
+
+                    </div>
+
+                    <div class="btn-group-lg" style="margin-left: 15%;">
+                        <input class="btn-default opt-buttons" type="button" id="conclude" value="Concluir">
+                        <input class="btn-default opt-buttons" type="button" id="premise" value="Premissa">
+                        <input class="btn-default opt-buttons" type="button" id="assumption" value="Suposição">
+                        <input class="btn-default opt-buttons" type="button" id="clear" value="Limpar">
+                    </div>
+
+                </div>
+                <p id="message"></p>
+            </div>
+            <div class="quadro" style="background-color: white">
+
+                <ol id="scope_0">
+                </ol>
+
+            </div>
+            <div class="footer" style="padding-top: 5px;">
+              <a href="exercicios.html" target="_blank" style="color: #00376f; font-weight: bold">Exercícios Propostos </a>
+              <a style="font-weight: bold"> | </a>
+               <a href="ajuda.html" target="_blank" style="color: #00376f; font-weight: bold">Como usar o TECProof </a>
+                <input type="button" class="btn-default" id="add_rule" value="Adicionar Regra">
+                <input type="button" id="printable" value="Imprimir">
+                <input type="button" class="btn-default btn-danger" id="reset" value="Limpar">
+                <input type="button" class="btn-default btn-warning" id="undo" value="Desfazer" disabled="">
+            </div>
+        </div>
+        <div class="col-lg-3" style="margin-top: 1%;">
+            <div class="rules">
+                <p class="pane_heading" style="color: #003770; font-size: 20px">Regras de Inferência</p>
+                <ul id="rules_box">
+
+                </ul>
+            </div>
+            <div class="summary">
+                <p class="pane_heading" style="color: #003770; font-size: 20px">Sumário da Regra</p>
+                <p id="summary"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="add_rule_box" style="border-radius: 10px; background-color: azure">
+
+        <div class="form-group">
+            <div>
+                <label class="right label-modal">Identificador:</label>
+                <input type="text" id="new_id" class="new_input" disabled="disable">
+            </div>
+            <div>
+                <label class="right label-modal">Regra:</label>
+                <input style="margin-left: 11.7%" type="text" id="new_name" class="new_input">
+            </div>
+            <div>
+                <label class="right label-modal">Premissa:</label>
+                <input style="margin-left: 5.7%" type="text" id="new_premises" class="new_input">
+            </div>
+            <div>
+                <label class="right label-modal">Conclusão:</label>
+                <input style="margin-left: 3.3%" type="text" id="new_conclusion" class="new_input">
+            </div>
+            <div>
+                <p class="note" style="color: steelblue">Use alfabeto, exceto V para a variável.
+                    Separe as premissas por vírgula</p>
+            </div>
+            <div>
+                <p class="right"><input type="button" id="add" value="Adicionar">
+                    <input type="button" id="cancel_add" value="Cancelar"></p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
+
